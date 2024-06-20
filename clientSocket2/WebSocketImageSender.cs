@@ -5,6 +5,8 @@ using System.IO;
 using System.Threading.Tasks;
 using WebSocketSharp;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Linq;
 //using System.Text.Json;
 
 
@@ -15,6 +17,7 @@ namespace clientSocket
         private WebSocket _webSocket;
         private string _resultsFolder;
         private string _imgPath;
+        private TaskCompletionSource<List<IElaboratedImageCoordinates>> _messageTaskCompletionSource;
 
         public WebSocketImageSender(string serverUri, string resultsFolder)
         {
@@ -35,7 +38,7 @@ namespace clientSocket
         public void Disconnect()
         { _webSocket.Close(); }
 
-        public void sendImage(byte[] imageBytes, string imageName, string imgPath)
+        public async Task<List<IElaboratedImageCoordinates>> sendImageAsync(byte[] imageBytes, string imageName, string imgPath)
         {
             _imgPath = imgPath;
             var metadata = new
@@ -56,9 +59,11 @@ namespace clientSocket
 
             string metadataJson = JsonConvert.SerializeObject(metadata);
             //string metadataJson = JsonSerializer.Serialize(metadata);
-
+            
             _webSocket.Send(metadataJson);
             _webSocket.Send(imageBytes);
+            _messageTaskCompletionSource = new TaskCompletionSource<List<IElaboratedImageCoordinates>>();
+            return await _messageTaskCompletionSource.Task;
             //await Task.Run(() => _webSocket.Send(imageBytes));
 
         }
@@ -79,8 +84,13 @@ namespace clientSocket
                 //File.WriteAllText(resultsFolder, e.Data);
                 SaveResults(_imgPath, e, _resultsFolder);
                 Console.WriteLine("Prediction Get");
+                
+                var response = JsonConvert.DeserializeObject<Response>(e.Data);
+                //var coordinatesList = new List<ElaboratedImageCoordinates>(response.Infer.Fasteners);
+                var coordinatesList = response.Infer.Fasteners.Cast<IElaboratedImageCoordinates>().ToList();
+                _messageTaskCompletionSource?.SetResult(coordinatesList);
             }
-            
+
         }
 
         private void Onclose(object sender, CloseEventArgs e)

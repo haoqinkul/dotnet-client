@@ -84,11 +84,15 @@ namespace Watchdog
             {
                 try{
                     //timingLogger.LogTimingStart(1, "Post");
-                    //var client = new Client(resultsFolder);
                     Thread.Sleep(1000);
                     string imageName = Path.GetFileName(file_path);
                     byte[] imageData = File.ReadAllBytes(file_path);
-                    wbSender.sendImage(imageData, imageName, file_path);
+                    List<IElaboratedImageCoordinates> coordinates = await wbSender.sendImageAsync(imageData, imageName, file_path);
+                    
+                    foreach (var coordinate in coordinates)
+                    {
+                        Console.WriteLine($"X: {coordinate.CoordinateX}, Y: {coordinate.CoordinateY}");
+                    }
 
                     // Console.WriteLine("Elapsed time: " + elapsedMs + "ms");
                 }

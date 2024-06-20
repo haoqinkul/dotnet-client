@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("watchdog")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+974859eeb840b43ff0a5e984595c020b98f45099")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b116064560493561a73815338ad2d25d62b76810")]
 [assembly: System.Reflection.AssemblyProductAttribute("watchdog")]
 [assembly: System.Reflection.AssemblyTitleAttribute("watchdog")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
