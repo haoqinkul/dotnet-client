@@ -1,0 +1,143 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\u0169876\\Documents\\git_repos\\communication-client-c\\watchdog\\watchdog\\watchdog.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\u0169876\\Documents\\git_repos\\communication-client-c\\watchdog\\clientSocket2\\clientSocket2.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\u0169876\\Documents\\git_repos\\communication-client-c\\watchdog\\clientSocket2\\clientSocket2.csproj",
+        "projectName": "clientSocket2",
+        "projectPath": "C:\\Users\\u0169876\\Documents\\git_repos\\communication-client-c\\watchdog\\clientSocket2\\clientSocket2.csproj",
+        "packagesPath": "C:\\Users\\u0169876\\.nuget\\packages\\",
+        "projectStyle": "PackagesConfig",
+        "configFilePaths": [
+          "C:\\Users\\u0169876\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net462": {
+            "projectReferences": {}
+          }
+        },
+        "packagesConfigPath": "C:\\Users\\u0169876\\Documents\\git_repos\\communication-client-c\\watchdog\\clientSocket2\\packages.config"
+      },
+      "frameworks": {
+        "net462": {}
+      }
+    },
+    "C:\\Users\\u0169876\\Documents\\git_repos\\communication-client-c\\watchdog\\watchdog\\watchdog.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\u0169876\\Documents\\git_repos\\communication-client-c\\watchdog\\watchdog\\watchdog.csproj",
+        "projectName": "watchdog",
+        "projectPath": "C:\\Users\\u0169876\\Documents\\git_repos\\communication-client-c\\watchdog\\watchdog\\watchdog.csproj",
+        "packagesPath": "C:\\Users\\u0169876\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\u0169876\\Documents\\git_repos\\communication-client-c\\watchdog\\watchdog\\obj\\publish\\win-x64\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\u0169876\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\u0169876\\Documents\\git_repos\\communication-client-c\\watchdog\\clientSocket2\\clientSocket2.csproj": {
+                "projectPath": "C:\\Users\\u0169876\\Documents\\git_repos\\communication-client-c\\watchdog\\clientSocket2\\clientSocket2.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Security.Permissions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[8.0.4, 8.0.4]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[8.0.4, 8.0.4]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[8.0.4, 8.0.4]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

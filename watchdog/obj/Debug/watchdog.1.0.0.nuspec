@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>watchdog</id>
+    <version>1.0.0</version>
+    <authors>watchdog</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="1a1e0bfe11ef0b0b7846c617a35f7bd2fef77e59" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="clientSocket2" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="client" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog" version="3.1.1" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Sinks.Console" version="5.0.1" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Sinks.File" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Configuration.ConfigurationManager" version="8.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\u0169876\Documents\git_repos\communication-client-c\watchdog\watchdog\bin\Debug\net8.0\watchdog.runtimeconfig.json" target="lib\net8.0\watchdog.runtimeconfig.json" />
+    <file src="C:\Users\u0169876\Documents\git_repos\communication-client-c\watchdog\watchdog\bin\Debug\net8.0\watchdog.dll" target="lib\net8.0\watchdog.dll" />
+  </files>
+</package>
